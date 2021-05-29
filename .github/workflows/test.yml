@@ -15,8 +15,14 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Install dependencies with requirements.txt
-        run: pip install -r requirements.txt
+      - name: Install dependencies with pipenv
+        run: |
+          pip install pipenv
+          pipenv install --deploy --dev
       
       - name: Run pytest
-        run: python -m pytest
+        - run: pipenv run isort --recursive --diff
+        - run: pipenv run black --check .
+        - run: pipenv run flake8
+        - run: pipenv run mypy
+        - run: pipenv run pytest --cov --cov-fail-under=100
