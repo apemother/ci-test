@@ -17,3 +17,7 @@ def test_answer():
 
 def test_add():
     assert add(1, 3) == 4
+
+
+def test_fail():
+    assert True == False
