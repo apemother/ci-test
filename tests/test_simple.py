@@ -14,3 +14,7 @@ def test_add():
 
 def test_subtract():
     assert simp.subtract(15, 2) == 13
+
+
+def test_multiply():
+    assert simp.multiply(10, 10) == 100
