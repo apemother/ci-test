@@ -20,8 +20,11 @@ jobs:
           pip install pipenv
           pipenv install --deploy --dev
       
-      - run: pipenv run isort --recursive --diff
-      - run: pipenv run black --check .
-      - run: pipenv run flake8
-      - run: pipenv run mypy
-      - run: pipenv run pytest --cov --cov-fail-under=100
+      - name: flake8
+        run: pipenv run flake8
+      
+      - name: black
+        run: pipenv run black --check .
+      
+      - name: pytest
+        run: pipenv run pytest --cov --cov-fail-under=100
