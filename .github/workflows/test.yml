@@ -27,6 +27,7 @@ jobs:
         run: pipenv run pytest --cov --cov-fail-under=100
 
   pytest:
+    runs-on: ubuntu-latest
     steps:
       - name: pytest
         run: pipenv run pytest --cov --cov-fail-under=100
