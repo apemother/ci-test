@@ -7,7 +7,7 @@ name = 'pypi'
 python_version = '3.7'
 
 [packages]
-numpy
+numpy = '*'
 
 [dev-packages]
-pytest
+pytest = '*'
