@@ -5,7 +5,7 @@ def add(x, y):
     return x + y
 
 def test_answer():
-    assert inc(3) == 5
+    assert inc(3) == 4
 
 def test_add():
     assert add(1, 3) == 4
