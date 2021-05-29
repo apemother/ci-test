@@ -38,5 +38,8 @@ jobs:
           pip install pipenv
           pipenv install --deploy --dev
 
-      - name: pytest
+      - name: tests
         run: pipenv run pytest --cov=tests --cov-fail-under=100
+
+      - name: src
+        run: pipenv run pytest --cov=src --cov-fail-under=100

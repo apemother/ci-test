@@ -1,27 +1,16 @@
 """
 Holds tests
 """
-
-
-def inc(x):
-    return x + 1
-
-
-def subtract(x, y):
-    return x - y
-
-
-def add(x, y):
-    return x + y
+import src.simple as simp
 
 
 def test_answer():
-    assert inc(3) == 4
+    assert simp.increment(3) == 4
 
 
 def test_add():
-    assert add(1, 3) == 4
+    assert simp.add(1, 3) == 4
 
 
 def test_subtract():
-    assert subtract(15, 2) == 13
+    assert simp.subtract(15, 2) == 13
