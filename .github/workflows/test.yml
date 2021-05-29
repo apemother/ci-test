@@ -16,9 +16,8 @@ jobs:
           python-version: 3.7
 
       - name: Install dependencies with pipenv
-        run: |
-          pip install pipenv
-          pipenv install --deploy --dev
+        - run: pip install pipenv
+        - run: pipenv install --deploy --dev
       
       - name: Run pytest
         - run: pipenv run isort --recursive --diff
