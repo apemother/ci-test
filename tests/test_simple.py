@@ -7,6 +7,10 @@ def inc(x):
     return x + 1
 
 
+def subtract(x, y):
+    return x - y
+
+
 def add(x, y):
     return x + y
 
@@ -19,5 +23,5 @@ def test_add():
     assert add(1, 3) == 4
 
 
-def test_fail():
+def test_true_equal_false():
     assert True == False
