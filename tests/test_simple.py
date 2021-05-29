@@ -25,3 +25,7 @@ def test_add():
 
 def test_true_equal_false():
     assert True == False
+
+
+def test_subtract():
+    assert subtract(15, 2) == 13
