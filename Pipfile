@@ -12,4 +12,3 @@ numpy = '*'
 [dev-packages]
 pytest = '*'
 flake8 = '*'
-black = '*'
